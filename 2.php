@@ -82,9 +82,9 @@
             </div>
             <div class="h-[140px] flex flex-col text-white font-mono justify-center items-center">
               <h1 class="text-4xl text-center">
-                ENTER TRACKER ID<br />(eg- BLR04PQ)
+                ENTER TRACKER ID<br />(eg- g67G4xx)
               </h1>
-              <input name="id" required type="text" class="h-[50px] border-[2px] border-white text-black uppercase w-[400px] bg-white/60 text-3xl" />
+              <input name="id" required type="text" class="h-[50px] border-[2px] border-white text-black  w-[400px] bg-white/60 text-3xl" />
             </div>
             <div class="h-[140px] flex flex-col text-white font-mono justify-center items-center">
               <h1 class="text-4xl text-center">
