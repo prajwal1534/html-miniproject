@@ -59,6 +59,17 @@
       <div class="h-[500px] w-[700px] my-auto border-[4px] border-white/25 justify-center flex bg-white/20 shadow-2xl shadow-white animate-fade_in">
 
         <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database_name = "tracker007";
+        $conn = mysqli_connect($servername, $username, $password, $database_name);
+        if (!$conn) {
+          die("OOPS!! failed to connect: " . mysqli_connect_error());
+        }
+        $sql = "SELECT * FROM `dummy`";
+        $result = mysqli_query($conn, $sql);
+
         if (!isset($_POST['track'])) {
 
           echo '<form method="POST" action="">
@@ -116,8 +127,22 @@
             $flag++;
           }
           if ($flag === 3) {
-            echo '<img src="minimap.png" class="object-fit mb-[30px] w-full" />';
-            echo '<script>alert("TRACKING SUCESSFUL!! Tap on the mini map for detailed view")</script>';
+            $flag1 = 0;
+            while ($row = mysqli_fetch_assoc($result)) {
+              if (($row['REGISTRATION_NUMBER'] == $regno) && ($row['TRACKER_ID'] == $id) && ($row['E-MAIL'] == $email)) {
+                $flag1 = 1;
+              }
+            }
+            if ($flag1 == 1) {
+              echo '<img src="minimap.png" class="object-fit mb-[30px] w-full" />';
+              echo '<script>alert("TRACKING SUCESSFUL!! Tap on the mini map for detailed view")</script>';
+            } else {
+              echo '<div class=" flex justify-center flex-col items-center">
+              <h1 class="text-4xl bg-red-600 font-bold">OOPS!! Details do not match</h1></br>
+              <nav><a href="2.php"><button  class=" border-[2px] border-white rounded-xl w-[20px] " id="button">Go Back</button></a></nav></div>';
+            }
+            //echo '<img src="minimap.png" class="object-fit mb-[30px] w-full" />';
+            //echo '<script>alert("TRACKING SUCESSFUL!! Tap on the mini map for detailed view")</script>';
           }
         }
         ?>
