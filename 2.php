@@ -134,7 +134,7 @@
               }
             }
             if ($flag1 == 1) {
-              echo '<img src="minimap.png" class="object-fit mb-[30px] w-full" />';
+              echo '<a href="https://www.google.com/maps"><img src="minimap.png" class="transition delay-100 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 object-fit mb-[30px] w-full" /></a>';
               echo '<script>alert("TRACKING SUCESSFUL!! Tap on the mini map for detailed view")</script>';
             } else {
               echo '<div class=" flex justify-center flex-col items-center">
