@@ -1,39 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="styles.css" rel="stylesheet" />
+    <title>PHP File create/write/read Example</title>
 </head>
 
-<body>
-    <?php
+<body class="bg-img">
+    <center>
+        <style>
+            body {
+                background-color: pink
+            }
 
-    $regno = $_POST['regno'];
-    $email = $_POST['email'];
-    $id = $_POST['id'];
-    $regno_err = $id_err = $email_err = "";
-    if (isset($_POST['tra'])) {
-        $flag = 0;
-        if (strlen($regno) == 10) {
-            $flag++;
+            h1 {
+                color: yellow
+            }
+
+            .bg-img {
+                background-image: url("6.jpg");
+                background-repeat: repeat-x;
+            }
+
+            .input-fields {
+                width: 25%;
+                height: 40px;
+            }
+
+            .margin {
+                margin: 10px;
+            }
+
+            .btn {
+                background-color: #ff123f;
+                color: whitesmoke;
+                font-size: 25;
+                font-weight: bold;
+                width: 25%;
+                height: 40px;
+            }
+        </style>
+        <FORM method="POST">
+            <h1>Enter the Information : </h1><input type="text" name="name" class="margin input-fields" /> <br />
+    </center>
+    <br />
+    <center>
+        <input type="submit" name="Submit1" value="Write File" class="margin input-fields btn" />
+        <input type="submit" name="Submit2" value="Read File" class="margin input-fields btn" />
+        </FORM>
+    </center>
+    <?php
+    if (isset($_POST['Submit1'])) {
+        //open file abc.txt in append mode
+        $myfile = fopen("pqr.txt", "a");
+        $text = $_POST["name"];
+        fwrite($myfile, $text);
+        fclose($myfile);
+    }
+    ?>
+    <?php
+    if (isset($_POST['Submit2'])) {
+        $filename = fopen("pqr.txt", "r");
+        if ($filename == true) {
+            $filesize = filesize("pqr.txt");
+            $filecontent = fread($filename, $filesize);
+            fclose($filename);
+            echo (" <h1> File Content = $filecontent </h1>");
+            echo (" <h1> File size : $filesize bytes </h1>");
         } else {
-            $regno_err = "Enter a valid vehicle Registration number";
-        }
-        if (strlen($id) == 7) {
-            $flag++;
-        } else {
-            $id_err = "Enter a valid Tracker ID number";
-        }
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $email_err = "Enter a valid e-mail address";
-        } else {
-            $flag++;
-        }
-        if ($flag == 3) {
-            echo '<h1 class=" text-red-600 "> HELLO </h1> ';
+            echo "Error !! Try again";
         }
     }
     ?>

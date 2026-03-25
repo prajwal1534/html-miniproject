@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JOB APPLICATION</title>
+  </head>
+  <center>
+    <body>
+      <h1>JOB APPLICATION FORM</h1>
+      <div
+        style="
+          background-color: #7719aa;
+          margin: 30%;
+          padding-top: 15px;
+          margin-top: 10px;
+          color: white;
+          font-size: 15px;
+        "
+      >
+        <form action="pg12.php" method="post" enctype="multipart/form-data">
+          <table cellspacing="10px" cellpadding="5%" align="left">
+            <tr>
+              <p style="color: yellow" style="font-family: sans-serif">
+                <font size="5"
+                  ><b
+                    >Please enter your information in the form below and the
+                    attach your resume.
+                  </b></font
+                >
+              </p>
+            </tr>
+            <tr>
+              <td>First Name:<font color="red">* </font></td>
+              <td>
+                <input
+                  type="text"
+                  name="FirstName"
+                  placeholder="FirstName"
+                  style="width: 100%; size: 30; padding: 5px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Last Name:</td>
+              <td>
+                <input
+                  type="text"
+                  name="LastName"
+                  placeholder="LastName"
+                  style="width: 100%; padding: 5px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Date of birth:<font color="red">* </font></td>
+              <td>
+                <input
+                  type="text"
+                  name="Date"
+                  placeholder="DD/MM/YYYY"
+                  style="width: 100%; padding: 5px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Email id:<font color="red">* </font></td>
+              &nbsp;&nbsp;&nbsp;
+              <td>
+                <input
+                  type="text"
+                  name="Email"
+                  placeholder="Email"
+                  style="width: 100%; padding: 5px"
+                />
+                <font color="red">(one e-mail id only):</font>
+                <font color="yellow">e.g. smith@hotmail.com</font>
+              </td>
+              <br />
+            </tr>
+            <tr>
+              <td>Mobile no:<font color="red">* </font></td>
+              <td>
+                <input
+                  type="text"
+                  name="Mobile"
+                  placeholder="Mobile no"
+                  style="width: 100%; padding: 5px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Designation:<font color="red">* </font></td>
+              <td>
+                <select style="width: 100%; padding: 5px">
+                  <option value="Principal">Principal</option>
+                  <option value="HOD">HOD</option>
+                  <option value="Associate Professor">
+                    Associate Professor
+                  </option>
+                  <option value="Asst. Professor">Asst. Professor</option>
+                  <option value="Lecturer">Lecturer</option>
+                  <option value="Software Engineer">Software Engineer</option>
+                  <option value="System Admin">System Admin</option>
+                  <option value="Pofessor">Pofessor</option>
+                  <option value="Instructor">Instructor</option>
+                </select>
+              </td>
+            </tr>
+            <td>Years Of Experience:<font color="red">* </font></td>
+            <td>
+              <input
+                type="text"
+                name="yearsExperience"
+                placeholder="number"
+                style="width: 100%; padding: 5px"
+              />
+            </td>
+
+            <tr>
+              <td>Address:<font color="red">* </font></td>
+              <td><textarea name="Address" rows="5" cols="40"></textarea></td>
+            </tr>
+            <tr>
+              <td>Gender:<font color="red">* </font></td>
+              <td>
+                <input type="radio" name="Gender" value="Gender" />male<input
+                  type="radio"
+                  name="Gender"
+                  value="Gender"
+                />female
+              </td>
+            </tr>
+            <tr>
+              <td>Country:</td>
+              <td>
+                <select style="width: 100%; padding: 5px">
+                  <option value="India">India</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="England">England</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Newzealand">Newzealand</option>
+                  <option value="USA">USA</option>
+                  <option value="Canada">Canada</option>
+                  <option value="German">German</option>
+                  <option value="Italy">Italy</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Hobbies:</td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="Hobbies"
+                  sstyle="margin-left:1%"
+                />Drawing and Painting
+                <input type="checkbox" name="Hobbies" />Singing
+                <input type="checkbox" name="Hobbies" />Dancing<br />
+                <input type="checkbox" name="Hobbies" />Reading Books
+                <input type="checkbox" name="Hobbies" />Cooking
+              </td>
+            </tr>
+            <div>
+              <table>
+                <tr>
+                  <td>Qualification:</td>
+                  <td>ScNo</td>
+                  <td>Examination</td>
+                  <td>Board</td>
+                  <td>Percentage</td>
+                  <td>Year of passing</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>1.</td>
+                  <td>class X</td>
+                  <td>
+                    <input type="text" name="Board_10" style="width: 90%" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="Percentage_10"
+                      style="width: 90%"
+                    />
+                  </td>
+                  <td>
+                    <input type="text" name="Year_10" style="width: 90%" />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>2.</td>
+                  <td>class XII</td>
+                  <td>
+                    <input type="text" name="Board_12" style="width: 90%" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="Percentage_12"
+                      style="width: 90%"
+                    />
+                  </td>
+                  <td>
+                    <input type="text" name="Year_12" style="width: 90%" />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>3.</td>
+                  <td>Graduation</td>
+                  <td><input type="text" name="Board" style="width: 90%" /></td>
+                  <td>
+                    <input type="text" name="Percentage" style="width: 90%" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="Year of passing"
+                      style="width: 90%"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>4.</td>
+                  <td>Masters</td>
+                  <td><input type="text" name="Board" style="width: 90%" /></td>
+                  <td>
+                    <input type="text" name="Percentage" style="width: 90%" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="Year of passing"
+                      style="width: 90%"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <form
+                    action="pg12.php"
+                    method="post"
+                    enctype="multipart/form-data"
+                  >
+                    Select File to upload:
+                    <input type="file" name="myfile" /><br />
+                  </form>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button type="submit" name="save">upload and save</button>
+                  </td>
+                  <td><input type="reset" name="reset" /></td>
+                </tr>
+              </table>
+            </div>
+          </table>
+        </form>
+      </div>
+    </body>
+  </center>
+</html>

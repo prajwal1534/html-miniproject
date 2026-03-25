@@ -134,7 +134,7 @@
               }
             }
             if ($flag1 == 1) {
-              echo '<a href="https://www.google.com/maps"><img src="minimap.png" class="transition delay-100 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 object-fit mb-[30px] w-full" /></a>';
+              echo '<a href="https://www.google.com/maps/place/KSIT+College+Kankapura+Road/@12.879518,77.5448787,18.8z/data=!4m6!3m5!1s0x3bae3ff401385233:0xa8e9861f4fb78ac!8m2!3d12.879916!4d77.544485!16s%2Fg%2F11rvdkxc0s?entry=ttu"><img src="minimap.png" class="transition delay-100 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 object-fit mb-[30px] w-full" /></a>';
               echo '<script>alert("TRACKING SUCESSFUL!! Tap on the mini map for detailed view")</script>';
             } else {
               echo '<div class=" flex justify-center flex-col items-center">
